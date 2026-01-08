@@ -1,71 +1,131 @@
---- Page 0 ---
+Solution to Problem A
 
-Solution te Pralo lem. oP
+Q: A SEQUENCE IS DEFINED BY $A_1 = 1$, $A_{N+1} = A_N + N + 1$.
+FIND A CLOSED-FORM EQUATION AND DETERMINE THE VALUE OF $A_{100}$'.
 
-——$—$—$———
+Ans:
+$A_{N+1} = A_N + N+1$
+$A_1 = 1$
+$A_{1+1} = A_1 + 1 + 1 = 1+1+1$
+$\Rightarrow A_2 = 3$
+$A_{2+1} = A_2 + 2 + 1 = 3 + 2 + 1$
+$\Rightarrow A_3 = 6$
+$A_3+1 = A_3 + 3 + 1 = 6 + 3 + 1$
+$\Rightarrow A_4 = 10$
+$A_{4+1} = A_4 + 4 + 1 = 10 + 4 + 1$
+$\Rightarrow A_5 = 15$
+$A_1, A_2, A_3, A_4, A_5 = 1, \stackrel{2}{)}, \stackrel{3}{)}, \stackrel{4}{)}, \stackrel{5}{)} 3, 6, 10, 15$
 
-: GME A einyence 1S DELINE’ Oa At” 180 Dine: Agt Neds
-4 FIND A CloseD- FORM FRUATIOY Anup perenne To CALWLATE THE
-‘ VALUE OF Any felp DETERMINE THE VALUE YF Asoo '
+SO, EVERYTIME WE GO FOR N, IT'S LIKE, $A_N = 1+2+3+ \cdot \cdot \cdot +(N-1)+N$
+SO THAT'S BINOMIAL N th TRIANGULAR FORMULA, TRIANGULAR FORMULA.
+$A_N = \frac{N(N+1)}{2}$
 
+THEREFOR, $A_{100} = \frac{100 \times (100+1)}{2} = \frac{100 \times 101}{2} = \frac{10100}{2} = 5050$
 
+(ANS)
 
+Solution to Problem B.
 
---- Page 1 ---
+Q: SHOW THAT THERE IS NO xER THAT SOLVES
 
-Nee NEE
-a. a ~
+THE EQUATION $\sqrt{3+x} + \sqrt{7+x} = 5$.
 
-- 30 Te THERE 15-0 ae i a
+Ans: $\sqrt{3+x} + \sqrt{7+x} = 5$
 
+$\Rightarrow \sqrt{3+x} = 5 - \sqrt{7-x}$
 
+$\Rightarrow (\sqrt{3+x})^2 = (5 - \sqrt{7-x})^2$
 
+$\Rightarrow 3+x = 25 - 2 \cdot 5 \cdot \sqrt{7-x} + 7-x$
 
---- Page 2 ---
+$\Rightarrow 3+x - 25 - 7 + x = -10\sqrt{7-x}$
 
-PROVE THAT Every POSITIVE: - INTERER W me NUMBER
+$\Rightarrow 2x - 29 = -10\sqrt{7-x}$
 
-A LOMPOSITL NUMBER, EXCEPT. FoR ONE
+$\Rightarrow (2x - 29)^2 = (-10\sqrt{7-x})^2$
 
-PostIvVE INTEAFR
-i424 = ComPosITE Nom BER
+$\Rightarrow 4x^2 - 2 \cdot 2x \cdot 29 + 29^2 = 100(7-x)$
 
-B= ants dye re ee
-= : (1) = +O" ace 40
+$\Rightarrow 4x^2 - 116x + 841 = 700 + 100x = 0$
 
-- On)
+$\Rightarrow 4x^2 - 16x + 141 = 0$
 
-2 hee= (on)
+$\Rightarrow x = \frac{-(-16) \pm \sqrt{(-16)^2 - 4 \cdot 4 \cdot 141}}{2 \cdot 4}$
 
-tev “SURPOSE =
-A z fron + es
+$\Rightarrow x = \frac{16 \pm \sqrt{256 - 2256}}{8}$
 
+$\Rightarrow x = \frac{16 \pm \sqrt{-2000}}{8}$
 
+Here, $x = \frac{16 + \sqrt{-2000}}{8}, \frac{16 - \sqrt{-2000}}{8}$
 
+Here,
 
---- Page 3 ---
+$\sqrt{-2000}$ can't be possible. So, This is an imaginary number.
 
-ae CA
+$\therefore x \notin R$ (Showed)
 
-Solution: ‘ Frallem E
+Solution to Question Problem D
 
-ee
+8: PROVE THAT EVERY POSITIVE INTEGER N, THE NUMBER $n^4+4$ IS A COMPOSITE NUMBER, EXCEPT FOR ONE VALUE OF N.
 
-AND THE AREA OF THO TRIANGLES:
+Ans: HERE, N = POSITIVE INTEGER
 
-= et AG sone AL =%¢ ini
+$n^4+4 =$ COMPOSITE NUMBER
 
-fn ae a. Ride
+$\implies = n^4 + 4n^2 + 4 - 4n^2$
+$= (n^2)^2 + 2 \cdot n^2 \cdot 2 + 2^2 - (2n)^2$
+$= (n^2+2)^2 - (2n)^2$
+$= (n^2+2 - 2n) (n^2+2+2n)$
 
-~
+LET SUPPOSE
+$A = n^2+2n+2$
+$B = n^2-2n+2$
 
-<a
+$= n^2+2n+1+1$
+$= (n+1)^2+1^a$
 
-“, VER r neve
+$= n^2-2n+1+1$
+$= (n-1)^2+1^a$
 
-OG 7 Vii ea sy rc / jo 7 "4 Q i rage.
-FORME) eh A = cx earl D ae
+IF n=1, $A = (1+1)^2+1$
+$= 4+1$
+$= 5$
+, $B = (1-1)^2+1$
+$= 0+1$
+$= 1$
 
-F iti |
+IF n=2, A = $(2+1)^2+1$
+$= 10$
+, $B = (2-1)^2+1$
+$= 2$
 
-gene he ae Oe Te TR ME De ee ek ig Tey
+IF n=3, A = $(3+1)^2+1$
+$= 17$
+, $B = (3-1)^2+1$
+$= 5$
+
+So, we can see Except n=1, Every number consider has more number to divide. (Proved)
+
+Solution to Problem E
+
+Q: A RECTANGLE WITH SIDE LENGTHS a AND b IS CUT BY A DIAGONAL AS SHOWN IN THE DRAWING BELOW. FIND THE PERIMETER AND THE AREA OF TWO TRIANGLES FORMED.
+
+[Image of a rectangle with a diagonal drawn, labeled with sides a and b]
+
+Ans: AS SHOWN,
+THE RECTANGLE DEVIDED EQUALLY BY A DIAGONAL.
+CREATED FORMED 2 TRIANGLES.
+A. WE ALL KNOW THAT
+EVERY ANGLES OF A PROPER RECTANGLE IS 90°
+SO BOTH TRIANGLE ARE FORMED AS RIGHT TRIANGLE.
+ACCORDING TO PYTHAGORAS,
+DIAGONAL = $\sqrt{a^2 + b^2}$
+LET SUPPOSE, DIAGONAL = c
+PERIMETER = a+b+c
+= $a+b+\sqrt{a^2 + b^2}$
+
+EACH TRIANGLE'S FORMED AREA = $\frac{1}{2} \times a \times b$
+, THE AREA 2 TRIANGLES FORMED = $2 \times \frac{1}{2} ab$
+= ab.
+
+(Ans)

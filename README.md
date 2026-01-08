@@ -5,7 +5,7 @@ Sometimes we only need texts. Sometimes we need to modify it, translate it, anal
 
 This project aims to be a **helpful toolkit** for handling multiple PDF text extraction scenarios.
 
-## Features
+## 📂 Features
 
 This repository handles three major types of PDFs:
 
@@ -33,10 +33,16 @@ This repository handles three major types of PDFs:
   - Language is English
   - Text is printed (not handwritten)
 
-For direct image OCR, see:
-- **File:** `ocr-image.py`
 
-## Run Command
+### 4. Scanned PDFs with AI-Assisted OCR (Multi-language & HandWritten)
+**File:** `ai-image-ocr-pdf.py`
+
+- Combines OCR with AI assistance
+- Better accuracy for scanned, handwritten, or non-English documents
+
+
+
+## 🖲️ Run Command
 To run any specific file for individual purpose of use, use the following command on terminal
 ```bash
     git clone https://github.com/RifatParadoxical/ocr-pdf.git
@@ -50,44 +56,101 @@ Edit any specific line of code or change file name, move files accordingly and r
 ```
 
 
-## Accuracy Overview
+## 🏗️ System Requirements
+
+This project depends on the following external tools:
+
+- **Poppler** – Required for converting PDF pages to images  
+  Installation guide:  
+  https://github.com/oschwartz10612/poppler-windows/releases (Windows)  
+  https://poppler.freedesktop.org/ (Linux / macOS via package managers)
+
+- **Tesseract OCR** – OCR engine for extracting text from images  
+  Official installation documentation:  
+  https://tesseract-ocr.github.io/tessdoc/Installation.html
+
+Ensure both tools are installed and available in your system PATH.
+
+You can verify installation by running:
+```bash
+pdftoppm -h
+tesseract --version
+```
+
+
+## 📊 Accuracy Overview
 
 | PDF Type | Expected Accuracy |
 |--------|------------------|
 | Text-based English PDF | ~100% |
 | AI-assisted language PDF | ~99%+ |
 | Scanned printed English PDF | ~95%+ |
-| Handwritten scanned PDF | Low / Not reliable |
+| Handwritten scanned PDF | ~98%+ |
+| AI-assisted language scanned PDF | ~98%+ |
+
+## 📝 Output Format Note
+**Note:** <br>
+The script writes plain `UTF-8` text using Python’s `open()` function. You can change the output filename extension (e.g., `.txt`, `.doc`, `.rtf`, `.md`) as needed, but no format-specific processing is applied.
+If you want it even more minimal and blunt: <br>
 
 
-## Limitations
+## 🚨 Limitations
 
 - AI-assisted extraction may produce small inaccuracies
-- Handwritten text is difficult and not a primary focus
 - OCR accuracy depends on image quality, resolution, and clarity
 
 These limitations are expected and documented intentionally.
 
----
 
-## Future Improvements
+## 🛠️ Troubleshooting
 
-Planned enhancements include:
+### "GEMINI_API_KEY not found"
 
-- Better handling of low-quality scans
-- Expanded multilingual support
-- Cleaner output formatting
-- broading formats including pdf to docs, image_scan pdf to text pdf etc
+- Ensure `.env` file exists in the same directory as the script
+- Check the API key is correctly formatted: `GEMINI_API_KEY=your_key`
+- No spaces around the `=` sign
 
-## Support the Project
+### "PDF file not found"
 
-If you find this repository useful:
+- Verify the PDF file is in the same directory as the script
+- Check the filename matches exactly (case-sensitive)
+- Use absolute path if needed: `C:/Users/YourName/Documents/file.pdf`
 
-- ⭐ Star the repository
-- 💖 Sponsor the project
+### "Error converting PDF to images"
 
-Your support helps keep development active and sustainable.
+- Install Poppler and ensure it's in your system PATH
+- For Windows: Add Poppler's `bin` folder to environment variables
 
-## License
+### Low Accuracy Results
 
-This project is open-source and available under the MIT License.
+- Increase DPI: `convert_from_path(pdf_path, dpi=400)`
+- Ensure the scan quality is good (not blurry or too dark)
+- Try a different Gemini model
+
+## 🆕 New Updates
+
+- ✅ Integrated Google Gemini 2.5 Flash Lite model for enhanced accuracy
+- ✅ Support for handwritten text recognition
+- ✅ Multi-language OCR without additional configuration
+- ✅ Improved error handling and validation
+- ✅ Page-by-page processing with progress tracking
+- ✅ Support for high-resolution scans (300 DPI)
+
+## 🤝 Contributing
+
+Feel free to submit issues, feature requests, or pull requests!
+
+
+## 📄 License
+
+This project is open-source and available for personal and commercial use.
+
+
+## ⭐ Support
+
+If this tool helped you, please consider giving it a star!
+
+
+## 📞 Contact
+
+For questions or support, please open an issue on GitHub.

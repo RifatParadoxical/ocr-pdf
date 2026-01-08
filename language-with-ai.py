@@ -20,20 +20,20 @@ def main():
         print("An error occurred while reading the PDF:", e)
 
     try:
-        prompt = f"""The following Bengali text was extracted from a PDF and may contain:
+        prompt = f"""The following Bengali(or whatever language it is) text was extracted from a PDF and may contain:
                     - broken characters
                     - incorrect punctuation
                     - spacing issues
                     - encoding artifacts
 
                     Your task:
-                    1. Reconstruct proper Bengali words where possible
+                    1. Reconstruct proper Bengali(or whatever language it is) words where possible
                     2. Fix spelling and grammar
                     3. Remove encoding artifacts
                     4. Preserve original meaning
                     5. Do NOT add new content
 
-                    Return only the corrected Bengali text. \n\n {extracted_text} """
+                    Return only the corrected Bengali(or whatever language it is) text. \n\n {extracted_text} """
 
         r = model.generate_content(prompt)
         dot_txt = r.text
